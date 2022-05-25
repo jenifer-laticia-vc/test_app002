@@ -18,6 +18,9 @@ posts = [
 
 
 @app.route("/")
+def my_index():
+    return render_template('index.html', token="hlo-flask-react")
+
 @app.route("/home")
 def home():
     return render_template('home.html', posts=posts)
